@@ -63,16 +63,6 @@ class WAFS_Match_Conditions {
 
 	/**
 	 * Subtotal.
-	 *
-	 * Match the condition value against the cart subtotal.
-	 *
-	 * @since 1.0.0
-	 *
-	 *@param 	bool 	$match		Current match value.
-	 *@param 	string 	$operator	Operator selected by the user in the condition row.
-	 *@param 	mixed 	$value		Value given by the user in the condition row.
-	 *@return 	BOOL 				Matching result, TRUE if results match, otherwise FALSE.
-	 * 
 	 */
 	 
 
