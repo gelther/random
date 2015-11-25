@@ -75,3 +75,4 @@ if ( !isset( $charlie ) )
 
 
 if(!isset($alpha)){
+if(!is
