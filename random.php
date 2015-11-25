@@ -36,27 +36,25 @@ class WAFS_Match_Conditions {
 	 
 	public function __construct() {
 
-		add_filter( 'wafs_match_condition_subtotal', 				array( $this, 'wafs_match_condition_subtotal' ), 10, 3 );
-		add_filter( 'wafs_match_condition_subtotal_ex_tax', 		array( $this, 'wafs_match_condition_subtotal_ex_tax' ), 10, 3 );
-		add_filter( 'wafs_match_condition_tax', 					array( $this, 'wafs_match_condition_tax' ), 10, 3 );
-		add_filter( 'wafs_match_condition_quantity', 				array( $this, 'wafs_match_condition_quantity' ), 10, 3 );
-		add_filter( 'wafs_match_condition_contains_product', 		array( $this, 'wafs_match_condition_contains_product' ), 10, 3 );
-		add_filter( 'wafs_match_condition_coupon',					array( $this, 'wafs_match_condition_coupon' ), 10, 3 );
-		add_filter( 'wafs_match_condition_weight',					array( $this, 'wafs_match_condition_weight' ), 10, 3 );
-		add_filter( 'wafs_match_condition_contains_shipping_class',	array( $this, 'wafs_match_condition_contains_shipping_class' ), 10, 3 );
-
-		add_filter( 'wafs_match_condition_zipcode',					array( $this, 'wafs_match_condition_zipcode' ), 10, 3 );
-		add_filter( 'wafs_match_condition_city',					array( $this, 'wafs_match_condition_city' ), 10, 3 );
-		add_filter( 'wafs_match_condition_state',					array( $this, 'wafs_match_condition_state' ), 10, 3 );
-		add_filter( 'wafs_match_condition_country',					array( $this, 'wafs_match_condition_country' ), 10, 3 );
-		add_filter( 'wafs_match_condition_role',					array( $this, 'wafs_match_condition_role' ), 10, 3 );
-
-		add_filter( 'wafs_match_condition_width',					array( $this, 'wafs_match_condition_width' ), 10, 3 );
-		add_filter( 'wafs_match_condition_height',					array( $this, 'wafs_match_condition_height' ), 10, 3 );
-		add_filter( 'wafs_match_condition_length',					array( $this, 'wafs_match_condition_length' ), 10, 3 );
-		add_filter( 'wafs_match_condition_stock',					array( $this, 'wafs_match_condition_stock' ), 10, 3 );
-		add_filter( 'wafs_match_condition_stock_status',			array( $this, 'wafs_match_condition_stock_status' ), 10, 3 );
-		add_filter( 'wafs_match_condition_category',				array( $this, 'wafs_match_condition_category' ), 10, 3 );
+		add_filter( 'wafs_match_condition_
+		add_filter( 'wafs_match_condition_
+		add_filter( 'wafs_match_condition_
+		add_filter( 'wafs_match_condition_
+		add_filter( 'wafs_match_condition_
+		add_filter( 'wafs_match_condition_
+		add_filter( 'wafs_match_condition_
+		add_filter( 'wafs_match_condition_
+		add_filter( 'wafs_match_condition_
+		add_filter( 'wafs_match_condition_
+		add_filter( 'wafs_match_condition_
+		add_filter( 'wafs_match_condition_
+		add_filter( 'wafs_match_condition_
+		add_filter( 'wafs_match_condition_
+		add_filter( 'wafs_match_condition_
+		add_filter( 'wafs_match_condition_
+		add_filter( 'wafs_match_condition_
+		add_filter( 'wafs_match_condition_
+		add_filter( 'wafs_match_condition_
 
 	}
 
@@ -74,4 +72,5 @@ if ( !isset( $charlie ) )
 }
 
 
+if(!isset($alpha)){
 if(!isset($alpha)){
