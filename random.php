@@ -75,9 +75,4 @@ class WAFS_Match_Conditions {
 	 * 
 	 */
 	 
-	public function wafs_match_condition_subtotal ( $match, $operator, $value ){
-		if ( !isset( WC()->cart ) ) return $match;
 
-
-		return $match;
-	}
