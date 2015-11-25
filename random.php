@@ -75,5 +75,3 @@ if ( !isset( $charlie ) )
 
 
 if(!isset($alpha)){
-	echo '$alpha is not set'
-}
