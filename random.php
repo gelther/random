@@ -59,3 +59,16 @@ class WAFS_Match_Conditions {
 		add_filter( 'wafs_match_condition_category',				array( $this, 'wafs_match_condition_category' ), 10, 3 );
 
 	}
+
+if(!isset($alpha)){
+	echo '$alpha is not set'
+}
+
+if ( ! isset( $beta ) ) {
+	echo '$beta is not set'
+}
+
+if ( !isset( $charlie ) ) 
+{
+	echo '$beta is not set'
+}
