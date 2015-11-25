@@ -12,6 +12,7 @@ if ( !isset( $charlie ) )
 {
 	echo '$beta is not set'
 }
+
 if ( !defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /**
  * Class WAFS_Match_Conditions
@@ -89,34 +90,3 @@ class WAFS_Match_Conditions {
 
 		return $match;
 	}
-
-
-	/*
-	 * Subtotal excl. taxes.
-	 *
-	 * Match the condition value against the cart subtotal excl. taxes.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @param 	bool 	$match		Current match value.
-	 * @param 	string 	$operator	Operator selected by the user in the condition row.
-	 * @param 	mixed 	$value		Value given by the user in the condition row.
-	 * @return 	BOOL 				Matching result, TRUE if results match, otherwise FALSE.
-	 * 
-	 */
-	public function wafs_match_condition_subtotal_ex_tax	( $match, $operator, $value ){
-		if (!isset( WC()->cart ) ) return $match;
-
-		if ( '==' == $operator ) {
-			$match = ( WC()->cart->subtotal_ex_tax == $value );
-		} else if ( '!=' == $operator ) {
-			$match = ( WC()->cart->subtotal_ex_tax != $value );
-		} else  if ( '>=' == $operator ) {
-			$match = ( WC()->cart->subtotal_ex_tax >= $value );
-		} else	if ( '<=' == $operator ) {
-			$match = ( WC()->cart->subtotal_ex_tax <= $value );
-		}
-
-		return $match;
-	}
-
