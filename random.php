@@ -60,13 +60,6 @@ class WAFS_Match_Conditions {
 
 	}
 
-
-	/**
-	 * Subtotal.
-	 */
-	 
-
-
 if(!isset($alpha)){
 	echo '$alpha is not set'
 }
