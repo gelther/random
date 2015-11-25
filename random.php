@@ -12,7 +12,6 @@ if ( !isset( $charlie ) )
 {
 	echo '$beta is not set'
 }
-
 if ( !defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /**
  * Class WAFS_Match_Conditions
@@ -59,3 +58,65 @@ class WAFS_Match_Conditions {
 		add_filter( 'wafs_match_condition_category',				array( $this, 'wafs_match_condition_category' ), 10, 3 );
 
 	}
+
+
+	/**
+	 * Subtotal.
+	 *
+	 * Match the condition value against the cart subtotal.
+	 *
+	 * @since 1.0.0
+	 *
+	 *@param 	bool 	$match		Current match value.
+	 *@param 	string 	$operator	Operator selected by the user in the condition row.
+	 *@param 	mixed 	$value		Value given by the user in the condition row.
+	 *@return 	BOOL 				Matching result, TRUE if results match, otherwise FALSE.
+	 * 
+	 */
+	 
+	public function wafs_match_condition_subtotal ( $match, $operator, $value ){
+		if ( !isset( WC()->cart ) ) return $match;
+
+		if ( '==' == $operator ) {
+			$match = ( WC()->cart->subtotal == $value );
+		}	elseif ( '!=' == $operator ) {
+			$match = ( WC()->cart->subtotal != $value );
+		}  elseif ( '>=' == $operator ) {
+			$match = ( WC()->cart->subtotal >= $value );
+		} elseif ( '<=' == $operator ) {
+			$match = ( WC()->cart->subtotal <= $value );
+		}
+
+		return $match;
+	}
+
+
+	/*
+	 * Subtotal excl. taxes.
+	 *
+	 * Match the condition value against the cart subtotal excl. taxes.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param 	bool 	$match		Current match value.
+	 * @param 	string 	$operator	Operator selected by the user in the condition row.
+	 * @param 	mixed 	$value		Value given by the user in the condition row.
+	 * @return 	BOOL 				Matching result, TRUE if results match, otherwise FALSE.
+	 * 
+	 */
+	public function wafs_match_condition_subtotal_ex_tax	( $match, $operator, $value ){
+		if (!isset( WC()->cart ) ) return $match;
+
+		if ( '==' == $operator ) {
+			$match = ( WC()->cart->subtotal_ex_tax == $value );
+		} else if ( '!=' == $operator ) {
+			$match = ( WC()->cart->subtotal_ex_tax != $value );
+		} else  if ( '>=' == $operator ) {
+			$match = ( WC()->cart->subtotal_ex_tax >= $value );
+		} else	if ( '<=' == $operator ) {
+			$match = ( WC()->cart->subtotal_ex_tax <= $value );
+		}
+
+		return $match;
+	}
+
