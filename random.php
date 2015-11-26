@@ -14,7 +14,7 @@ if ( !isset( $charlie ) )
 }
 
 ?>
-This should not! be changed! You understand?
+This should not!be changed!You understand?
 
 <?php
 if ( !defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
