@@ -1,6 +1,6 @@
 <?php
 
-if(!isset($alpha)){
+if(! isset($alpha)){
 	echo '$alpha is not set'
 }
 
@@ -8,14 +8,14 @@ if ( ! isset( $beta ) ) {
 	echo '$beta is not set'
 }
 
-if ( !isset( $charlie ) ) 
+if ( ! isset( $charlie ) ) 
 {
 	echo '$beta is not set'
 }
 
 
 
-if ( !defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /**
  * Class WAFS_Match_Conditions
  *
@@ -78,7 +78,7 @@ class WAFS_Match_Conditions {
 	 */
 	 
 	public function wafs_match_condition_subtotal ( $match, $operator, $value ){
-		if ( !isset( WC()->cart ) ) return $match;
+		if ( ! isset( WC()->cart ) ) return $match;
 
 		if ( '==' == $operator ) {
 			$match = ( WC()->cart->subtotal == $value );
@@ -108,7 +108,7 @@ class WAFS_Match_Conditions {
 	 * 
 	 */
 	public function wafs_match_condition_subtotal_ex_tax	( $match, $operator, $value ){
-		if (!isset( WC()->cart ) ) return $match;
+		if (! isset( WC()->cart ) ) return $match;
 
 		if ( '==' == $operator ) {
 			$match = ( WC()->cart->subtotal_ex_tax == $value );
