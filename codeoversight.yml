@@ -7,7 +7,7 @@ PHP:
     control_structure_expression_inner_whitespace: no_apply
     doc_function_whitespace: no_apply
     else_if_whitespace: no_apply
-    exclamation_whitespace: no_apply
+    exclamation_whitespace: whitespace
     force_control_structure_braces: no_apply
     function_args_separator_whitespace: no_apply
     function_parentheses_inner_whitespace: no_apply
