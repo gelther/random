@@ -23,7 +23,7 @@ PHP:
     trailing_whitespace: no_apply
     true_false_casing: no_apply
     type_cast_casing: no_apply
-    type_cast_inner_whitespace: no_space
+    type_cast_inner_whitespace: no_apply
     use_quotes: no_apply
     variable_array_index_whitespace: no_apply
     whitespace_after_control_structure: no_apply
