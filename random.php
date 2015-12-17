@@ -1,6 +1,6 @@
 <?php
 
-if(!isset($alpha)){
+if( !isset( $alpha ) ){
 	echo '$alpha is not set!'
 }
 
@@ -110,7 +110,7 @@ class WAFS_Match_Conditions {
 	 * 
 	 */
 	public function wafs_match_condition_subtotal_ex_tax	( $match, $operator, $value ){
-		if (!isset( WC()->cart ) ) return $match;
+		if ( !isset( WC()->cart ) ) return $match;
 
 		if ( '==' == $operator ) {
 			$match = ( WC()->cart->subtotal_ex_tax == $value );
@@ -145,7 +145,7 @@ class WAFS_Match_Conditions {
 
 		if ( ! isset( WC()->cart ) ) return $match;
 
-		$taxes = array_sum( (ARRAY ) WC()->cart->taxes );
+		$taxes = array_sum( ( ARRAY ) WC()->cart->taxes );
 
 		if ( '==' == $operator ) :
 			$match = ( $taxes == $value );
@@ -380,7 +380,7 @@ class WAFS_Match_Conditions {
 	 * 
 	 */
 	public function wafs_match_condition_subtotal_ex_tax	( $match, $operator, $value ){
-		if (!isset( WC()->cart ) ) return $match;
+		if ( !isset( WC()->cart ) ) return $match;
 
 		if ( '==' == $operator ) {
 			$match = ( WC()->cart->subtotal_ex_tax == $value );
@@ -415,7 +415,7 @@ class WAFS_Match_Conditions {
 
 		if ( ! isset( WC()->cart ) ) return $match;
 
-		$taxes = array_sum( (ARRAY ) WC()->cart->taxes );
+		$taxes = array_sum( ( ARRAY ) WC()->cart->taxes );
 
 		if ( '==' == $operator ) :
 			$match = ( $taxes == $value );
@@ -622,23 +622,23 @@ class WAFS_Match_Conditions {
 		if ( '==' == $operator ) :
 
 			if ( preg_match( '/\, ?/', $value ) ) {
-				$match = ( in_array( (int) WC()->customer->get_shipping_postcode(), array_map( 'intval', explode( ',', $value ) ) ) );
+				$match = ( in_array( ( int ) WC()->customer->get_shipping_postcode(), array_map( 'intval', explode( ',', $value ) ) ) );
 			} else {
-				$match = ( (int) WC()->customer->get_shipping_postcode() == (int) $value );
+				$match = ( (int) WC()->customer->get_shipping_postcode() == ( int ) $value );
 			}
 
 		elseif ( '!=' == $operator ) :
 
 			if ( preg_match( '/\, ?/', $value ) ) {
-				$match = ( ! in_array( (int) WC()->customer->get_shipping_postcode(), array_map( 'intval', explode( ',', $value ) ) ) );
+				$match = ( ! in_array( ( int ) WC()->customer->get_shipping_postcode(), array_map( 'intval', explode( ',', $value ) ) ) );
 			}else {
-				$match = ( (int) WC()->customer->get_shipping_postcode() != (int) $value );
+				$match = ( (int) WC()->customer->get_shipping_postcode() != ( int ) $value );
 			}
 
 		elseif ( '>=' == $operator ) :
-			$match = ( (int) WC()->customer->get_shipping_postcode() >= (int) $value );
+			$match = ( ( int ) WC()->customer->get_shipping_postcode() >= ( int ) $value );
 		elseif ( '<=' == $operator ) :
-			$match = ( (int) WC()->customer->get_shipping_postcode() <= (int) $value );
+			$match = ( ( int ) WC()->customer->get_shipping_postcode() <= ( int ) $value );
 		endif;
 
 		return $match;
@@ -792,7 +792,7 @@ class WAFS_Match_Conditions {
 		endforeach;
 
 		$max_width = max( ( array ) $width );
-		$max_width = max( ( array) $width );
+		$max_width = max( ( array ) $width );
 
 		if ( '==' == $operator ) :
 			$match = ( $max_width == $value );
