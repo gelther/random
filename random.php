@@ -1,6 +1,6 @@
 <?php
 
-if(!isset($alpha)){
+if(!isset( $alpha )){
 	echo '$alpha is not set!'
 }
 
@@ -622,7 +622,7 @@ class WAFS_Match_Conditions {
 		if ( '==' == $operator ) :
 
 			if ( preg_match( '/\, ?/', $value ) ) {
-				$match = ( in_array( (int) WC()->customer->get_shipping_postcode(), array_map( 'intval', explode( ',', $value ) ) ) );
+				$match = ( in_array( ( int ) WC()->customer->get_shipping_postcode(), array_map( 'intval', explode( ',', $value ) ) ) );
 			} else {
 				$match = ( (int) WC()->customer->get_shipping_postcode() == (int) $value );
 			}
@@ -630,7 +630,7 @@ class WAFS_Match_Conditions {
 		elseif ( '!=' == $operator ) :
 
 			if ( preg_match( '/\, ?/', $value ) ) {
-				$match = ( ! in_array( (int) WC()->customer->get_shipping_postcode(), array_map( 'intval', explode( ',', $value ) ) ) );
+				$match = ( ! in_array( ( int ) WC()->customer->get_shipping_postcode(), array_map( 'intval', explode( ',', $value ) ) ) );
 			}else {
 				$match = ( (int) WC()->customer->get_shipping_postcode() != (int) $value );
 			}
