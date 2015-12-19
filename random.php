@@ -623,7 +623,8 @@ class WAFS_Match_Conditions {
 
 			if ( preg_match( '/\, ?/', $value ) ) {
 				$match = ( in_array( (int) WC()->customer->get_shipping_postcode(), array_map( 'intval', explode( ',', $value ) ) ) );
-			} else {
+			} else
+			{
 				$match = ( (int) WC()->customer->get_shipping_postcode() == (int) $value );
 			}
 
@@ -631,7 +632,8 @@ class WAFS_Match_Conditions {
 
 			if ( preg_match( '/\, ?/', $value ) ) {
 				$match = ( ! in_array( (int) WC()->customer->get_shipping_postcode(), array_map( 'intval', explode( ',', $value ) ) ) );
-			}else {
+			}else
+			{
 				$match = ( (int) WC()->customer->get_shipping_postcode() != (int) $value );
 			}
 
