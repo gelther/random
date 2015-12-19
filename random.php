@@ -1,6 +1,6 @@
 <?php
 
-if(!isset($alpha)){
+if(!isset( $alpha )){
 	echo '$alpha is not set!'
 }
 
