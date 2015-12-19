@@ -623,7 +623,8 @@ class WAFS_Match_Conditions {
 
 			if ( preg_match( '/\, ?/', $value ) ) {
 				$match = ( in_array( (int) WC()->customer->get_shipping_postcode(), array_map( 'intval', explode( ',', $value ) ) ) );
-			} else {
+			}
+else {
 				$match = ( (int) WC()->customer->get_shipping_postcode() == (int) $value );
 			}
 
@@ -631,7 +632,8 @@ class WAFS_Match_Conditions {
 
 			if ( preg_match( '/\, ?/', $value ) ) {
 				$match = ( ! in_array( (int) WC()->customer->get_shipping_postcode(), array_map( 'intval', explode( ',', $value ) ) ) );
-			}else {
+			}
+else {
 				$match = ( (int) WC()->customer->get_shipping_postcode() != (int) $value );
 			}
 
@@ -783,8 +785,8 @@ class WAFS_Match_Conditions {
 			if ( true == $product['data']->variation_has_width )
 			{
 				$width[] = ( get_post_meta( $product['data']->variation_id, '_width', true ) );
-			} 
-			else
+			}
+else
 			{
 				$width[] = ( get_post_meta( $product['product_id'], '_width', true ) );
 			}
@@ -955,16 +957,18 @@ class WAFS_Match_Conditions {
 
 			$match = true;
 			foreach ( WC()->cart->cart_contents as $product ) :
-				if ( get_post_meta( $product['product_id'], '_stock_status', true ) != $value )
+				if ( get_post_meta( $product['product_id'], '_stock_status', true ) != $value ) {
 					$match = FalSe;
+				}
 			endforeach;
 
 		elseif ( '!=' == $operator ) :
 
 			$match = true;
 			foreach ( WC()->cart->cart_contents as $product ) :
-				if ( get_post_meta( $product['product_id'], '_stock_status', true ) == $value )
+				if ( get_post_meta( $product['product_id'], '_stock_status', true ) == $value ) {
 					$match = FALSE;
+				}
 			endforeach;
 
 		endif;
