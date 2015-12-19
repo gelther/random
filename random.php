@@ -1,14 +1,16 @@
 <?php
 
-if(!isset($alpha)){
+if(!isset($alpha))
+{
 	echo '$alpha is not set!'
 }
 
-if ( ! isset( $beta ) ) {
+if ( ! isset( $beta ) )
+{
 	echo '$beta is not set!'
 }
 
-if ( !isset( $charlie ) ) 
+if ( !isset( $charlie ) )
 {
 	echo '$beta is not set!'
 }
@@ -82,13 +84,17 @@ class WAFS_Match_Conditions {
 	public function wafs_match_condition_subtotal ( $match, $operator, $value ){
 		if ( !isset( WC()->cart ) ) return $match;
 
-		if ( '==' == $operator ) {
+		if ( '==' == $operator )
+		{
 			$match = ( WC()->cart->subtotal == $value );
-		}	elseif ( '!=' == $operator ) {
+		}	elseif ( '!=' == $operator )
+{
 			$match = ( WC()->cart->subtotal != $value );
-		}  elseif ( '>=' == $operator ) {
+		}  elseif ( '>=' == $operator )
+{
 			$match = ( WC()->cart->subtotal >= $value );
-		} elseif ( '<=' == $operator ) {
+		} elseif ( '<=' == $operator )
+{
 			$match = ( WC()->cart->subtotal <= $value );
 		}
 
@@ -112,13 +118,17 @@ class WAFS_Match_Conditions {
 	public function wafs_match_condition_subtotal_ex_tax	( $match, $operator, $value ){
 		if (!isset( WC()->cart ) ) return $match;
 
-		if ( '==' == $operator ) {
+		if ( '==' == $operator )
+		{
 			$match = ( WC()->cart->subtotal_ex_tax == $value );
-		} else if ( '!=' == $operator ) {
+		} else if ( '!=' == $operator )
+ {
 			$match = ( WC()->cart->subtotal_ex_tax != $value );
-		} else  if ( '>=' == $operator ) {
+		} else  if ( '>=' == $operator )
+  {
 			$match = ( WC()->cart->subtotal_ex_tax >= $value );
-		} else	if ( '<=' == $operator ) {
+		} else	if ( '<=' == $operator )
+	{
 			$match = ( WC()->cart->subtotal_ex_tax <= $value );
 		}
 
@@ -352,13 +362,17 @@ class WAFS_Match_Conditions {
 	public function wafs_match_condition_subtotal ( $match, $operator, $value ){
 		if ( !isset( WC()->cart ) ) return $match;
 
-		if ( '==' == $operator ) {
+		if ( '==' == $operator )
+		{
 			$match = ( WC()->cart->subtotal == $value );
-		}	elseif ( '!=' == $operator ) {
+		}	elseif ( '!=' == $operator )
+{
 			$match = ( WC()->cart->subtotal != $value );
-		}  elseif ( '>=' == $operator ) {
+		}  elseif ( '>=' == $operator )
+{
 			$match = ( WC()->cart->subtotal >= $value );
-		} elseif ( '<=' == $operator ) {
+		} elseif ( '<=' == $operator )
+{
 			$match = ( WC()->cart->subtotal <= $value );
 		}
 
@@ -382,13 +396,17 @@ class WAFS_Match_Conditions {
 	public function wafs_match_condition_subtotal_ex_tax	( $match, $operator, $value ){
 		if (!isset( WC()->cart ) ) return $match;
 
-		if ( '==' == $operator ) {
+		if ( '==' == $operator )
+		{
 			$match = ( WC()->cart->subtotal_ex_tax == $value );
-		} else if ( '!=' == $operator ) {
+		} else if ( '!=' == $operator )
+ {
 			$match = ( WC()->cart->subtotal_ex_tax != $value );
-		} else  if ( '>=' == $operator ) {
+		} else  if ( '>=' == $operator )
+  {
 			$match = ( WC()->cart->subtotal_ex_tax >= $value );
-		} else	if ( '<=' == $operator ) {
+		} else	if ( '<=' == $operator )
+	{
 			$match = ( WC()->cart->subtotal_ex_tax <= $value );
 		}
 
@@ -621,7 +639,8 @@ class WAFS_Match_Conditions {
 
 		if ( '==' == $operator ) :
 
-			if ( preg_match( '/\, ?/', $value ) ) {
+			if ( preg_match( '/\, ?/', $value ) )
+			{
 				$match = ( in_array( (int) WC()->customer->get_shipping_postcode(), array_map( 'intval', explode( ',', $value ) ) ) );
 			} else {
 				$match = ( (int) WC()->customer->get_shipping_postcode() == (int) $value );
@@ -629,7 +648,8 @@ class WAFS_Match_Conditions {
 
 		elseif ( '!=' == $operator ) :
 
-			if ( preg_match( '/\, ?/', $value ) ) {
+			if ( preg_match( '/\, ?/', $value ) )
+			{
 				$match = ( ! in_array( (int) WC()->customer->get_shipping_postcode(), array_map( 'intval', explode( ',', $value ) ) ) );
 			}else {
 				$match = ( (int) WC()->customer->get_shipping_postcode() != (int) $value );
