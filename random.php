@@ -84,9 +84,9 @@ class WAFS_Match_Conditions {
 
 		if ( '==' == $operator ) {
 			$match = ( WC()->cart->subtotal == $value );
-		}	elseif ( '!=' == $operator ) {
+		} elseif ( '!=' == $operator ) {
 			$match = ( WC()->cart->subtotal != $value );
-		}  elseif ( '>=' == $operator ) {
+		} elseif ( '>=' == $operator ) {
 			$match = ( WC()->cart->subtotal >= $value );
 		} elseif ( '<=' == $operator ) {
 			$match = ( WC()->cart->subtotal <= $value );
@@ -354,9 +354,9 @@ class WAFS_Match_Conditions {
 
 		if ( '==' == $operator ) {
 			$match = ( WC()->cart->subtotal == $value );
-		}	elseif ( '!=' == $operator ) {
+		} elseif ( '!=' == $operator ) {
 			$match = ( WC()->cart->subtotal != $value );
-		}  elseif ( '>=' == $operator ) {
+		} elseif ( '>=' == $operator ) {
 			$match = ( WC()->cart->subtotal >= $value );
 		} elseif ( '<=' == $operator ) {
 			$match = ( WC()->cart->subtotal <= $value );
@@ -625,17 +625,13 @@ class WAFS_Match_Conditions {
 				$match = ( in_array( (int) WC()->customer->get_shipping_postcode(), array_map( 'intval', explode( ',', $value ) ) ) );
 			} else {
 				$match = ( (int) WC()->customer->get_shipping_postcode() == (int) $value );
-			}
-
-		elseif ( '!=' == $operator ) :
+			} elseif ( '!=' == $operator ) :
 
 			if ( preg_match( '/\, ?/', $value ) ) {
 				$match = ( ! in_array( (int) WC()->customer->get_shipping_postcode(), array_map( 'intval', explode( ',', $value ) ) ) );
-			}else {
+			} else {
 				$match = ( (int) WC()->customer->get_shipping_postcode() != (int) $value );
-			}
-
-		elseif ( '>=' == $operator ) :
+			} elseif ( '>=' == $operator ) :
 			$match = ( (int) WC()->customer->get_shipping_postcode() >= (int) $value );
 		elseif ( '<=' == $operator ) :
 			$match = ( (int) WC()->customer->get_shipping_postcode() <= (int) $value );
@@ -783,8 +779,7 @@ class WAFS_Match_Conditions {
 			if ( true == $product['data']->variation_has_width )
 			{
 				$width[] = ( get_post_meta( $product['data']->variation_id, '_width', true ) );
-			} 
-			else
+			} else
 			{
 				$width[] = ( get_post_meta( $product['product_id'], '_width', true ) );
 			}
