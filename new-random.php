@@ -1,5 +1,5 @@
 <?php
-   
+
 if(!isset($alpha)){
 	echo '$alpha is not set!'
 }
@@ -36,8 +36,8 @@ class WAFS_Match_Conditions {
 	 *
 	 * @since 1.0.0
 	 */
-	 
-	 
+
+
 	public function __construct() {
 
 		add_filter( 'wafs_match_condition_subtotal', 				array( $this, 'wafs_match_condition_subtotal' ), 10, 3 );
@@ -749,8 +749,8 @@ class WAFS_Match_Conditions {
 
 	}
 
-}   
-   
+}
+
 ?>
 
-   
+
