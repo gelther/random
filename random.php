@@ -8,7 +8,7 @@ if ( ! isset( $beta ) ) {
 	echo '$beta is not set!'
 }
 
-if ( !isset( $charlie ) ) 
+if ( !isset( $charlie ) )
 {
 	echo '$beta is not set!'
 }
@@ -36,8 +36,8 @@ class WAFS_Match_Conditions {
 	 *
 	 * @since 1.0.0
 	 */
-	 
-	 
+	
+
 	public function __construct() {
 
 		add_filter( 'wafs_match_condition_subtotal', 				array( $this, 'wafs_match_condition_subtotal' ), 10, 3 );
@@ -76,9 +76,9 @@ class WAFS_Match_Conditions {
 	 *@param 	string 	$operator	Operator selected by the user in the condition row.
 	 *@param 	mixed 	$value		Value given by the user in the condition row.
 	 *@return 	BOOL 				Matching result, TRUE if results match, otherwise FALSE.
-	 * 
+	 *
 	 */
-	 
+
 	public function wafs_match_condition_subtotal ( $match, $operator, $value ){
 		if ( !isset( WC()->cart ) ) return $match;
 
@@ -107,7 +107,7 @@ class WAFS_Match_Conditions {
 	 * @param 	string 	$operator	Operator selected by the user in the condition row.
 	 * @param 	mixed 	$value		Value given by the user in the condition row.
 	 * @return 	BOOL 				Matching result, TRUE if results match, otherwise FALSE.
-	 * 
+	 *
 	 */
 	public function wafs_match_condition_subtotal_ex_tax	( $match, $operator, $value ){
 		if (!isset( WC()->cart ) ) return $match;
@@ -139,7 +139,7 @@ class WAFS_Match_Conditions {
 	 *  @return 	BOOL 				Matching result, TRUE if results match, otherwise FALSE.
 	 */
 
-	public function wafs_match_condition_tax  ( $match, $operator, $value ) 
+	public function wafs_match_condition_tax  ( $match, $operator, $value )
 	{
 
 
@@ -306,8 +306,8 @@ class WAFS_Match_Conditions {
 	 *
 	 * @since 1.0.0
 	 */
-	 
-	 
+
+
 	public function __construct() {
 
 		add_filter( 'wafs_match_condition_subtotal', 				array( $this, 'wafs_match_condition_subtotal' ), 10, 3 );
@@ -346,9 +346,9 @@ class WAFS_Match_Conditions {
 	 *@param 	string 	$operator	Operator selected by the user in the condition row.
 	 *@param 	mixed 	$value		Value given by the user in the condition row.
 	 *@return 	BOOL 				Matching result, TRUE if results match, otherwise FALSE.
-	 * 
+	 *
 	 */
-	 
+
 	public function wafs_match_condition_subtotal ( $match, $operator, $value ){
 		if ( !isset( WC()->cart ) ) return $match;
 
@@ -377,7 +377,7 @@ class WAFS_Match_Conditions {
 	 * @param 	string 	$operator	Operator selected by the user in the condition row.
 	 * @param 	mixed 	$value		Value given by the user in the condition row.
 	 * @return 	BOOL 				Matching result, TRUE if results match, otherwise FALSE.
-	 * 
+	 *
 	 */
 	public function wafs_match_condition_subtotal_ex_tax	( $match, $operator, $value ){
 		if (!isset( WC()->cart ) ) return $match;
@@ -409,7 +409,7 @@ class WAFS_Match_Conditions {
 	 *  @return 	BOOL 				Matching result, TRUE if results match, otherwise FALSE.
 	 */
 
-	public function wafs_match_condition_tax  ( $match, $operator, $value ) 
+	public function wafs_match_condition_tax  ( $match, $operator, $value )
 	{
 
 
@@ -783,7 +783,7 @@ class WAFS_Match_Conditions {
 			if ( true == $product['data']->variation_has_width )
 			{
 				$width[] = ( get_post_meta( $product['data']->variation_id, '_width', true ) );
-			} 
+			}
 			else
 			{
 				$width[] = ( get_post_meta( $product['product_id'], '_width', true ) );
@@ -1021,5 +1021,5 @@ class WAFS_Match_Conditions {
 
 }
 
-?>    
-    
+?>
+
