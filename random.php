@@ -13,7 +13,7 @@ if ( !isset( $charlie ) )
 	echo '$beta is not set!'
 }
 
-?>
+
 This should not!be changed!You understand?
 
 <?php
@@ -1021,6 +1021,6 @@ class WAFS_Match_Conditions {
 
 }   
    
-?>
+
 
    
