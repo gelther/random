@@ -1,5 +1,5 @@
 <?php
-
+   
 if(!isset($alpha)){
 	echo '$alpha is not set!'
 }
@@ -1019,7 +1019,8 @@ class WAFS_Match_Conditions {
 
 	}
 
-}
-
+}   
+   
 ?>
 
+   
