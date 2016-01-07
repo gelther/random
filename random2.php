@@ -7,7 +7,7 @@ Test2
 
 
 
-	*/
+*/
 
-  	public function __construct() {
+publicfunction__construct(){
 
