@@ -1,12 +1,12 @@
 <?php
 
-add_action( 'was_match_condition_contains_category', 'was_match_condition_contains_category', 10, 3 );    
+add_action( 'was_match_condition_contains_category', 'was_match_condition_contains_category', 10, 3 );
 
-/* Match contains category    
+/* Match contains category
  *
  * @param bool $match
  * @param string $operator
- * @param mixed $value    
+ * @param mixed $value
  * @return bool
  */
 function was_match_condition_contains_category( $match, $operator, $value ) {
@@ -15,7 +15,7 @@ function was_match_condition_contains_category( $match, $operator, $value ) {
 
 	if ( ! isset( $woocommerce->cart ) ) return;
 
-	$match = false;    
+	$match = false;
 
 	if ( '==' == $operator ) :
 
@@ -23,7 +23,7 @@ function was_match_condition_contains_category( $match, $operator, $value ) {
 
 			if ( has_term( $value, 'product_cat', $product['product_id'] ) ) :
 				return true;
-			endif;   
+			endif;
 
 		endforeach;
 
@@ -37,12 +37,13 @@ function was_match_condition_contains_category( $match, $operator, $value ) {
 			endif;
 
 		endforeach;
-			
+
 	endif;
 
 	return $match;
 
 }
+
 
 add_filter( 'was_conditions', 'was_conditions_add_contains_category', 10, 1 );
 function was_conditions_add_contains_category( $conditions ) {
@@ -52,7 +53,8 @@ function was_conditions_add_contains_category( $conditions ) {
 	return $conditions;
 
 }
-		
+
+
 add_filter( 'was_values', 'was_values_add_contains_category', 10, 2 );
 function was_values_add_contains_category( $values, $condition ) {
 
@@ -73,7 +75,3 @@ function was_values_add_contains_category( $values, $condition ) {
 	return $values;
 
 }
-
-
-
-?>
