@@ -1,5 +1,5 @@
 <?php
-   
+
 if(!isset($alpha)){
 	echo '$alpha is not set!'
 }
@@ -36,8 +36,6 @@ class WAFS_Match_Conditions {
 	 *
 	 * @since 1.0.0
 	 */
-	 
-	 
 	public function __construct() {
 
 		add_filter( 'wafs_match_condition_subtotal', 				array( $this, 'wafs_match_condition_subtotal' ), 10, 3 );
@@ -76,10 +74,8 @@ class WAFS_Match_Conditions {
 	 *@param 	string 	$operator	Operator selected by the user in the condition row.
 	 *@param 	mixed 	$value		Value given by the user in the condition row.
 	 *@return 	BOOL 				Matching result, TRUE if results match, otherwise FALSE.
-	 *
 	 */
-
-	public function wafs_match_condition_subtotal ( $match, $operator, $value ){
+	public function wafs_match_condition_subtotal( $match, $operator, $value ){
 		if ( !isset( WC()->cart ) ) return $match;
 
 		if ( '==' == $operator ) {
@@ -96,7 +92,7 @@ class WAFS_Match_Conditions {
 	}
 
 
-	/*
+	/**
 	 * Subtotal excl. taxes.
 	 *
 	 * Match the condition value against the cart subtotal excl. taxes.
@@ -107,9 +103,8 @@ class WAFS_Match_Conditions {
 	 * @param 	string 	$operator	Operator selected by the user in the condition row.
 	 * @param 	mixed 	$value		Value given by the user in the condition row.
 	 * @return 	BOOL 				Matching result, TRUE if results match, otherwise FALSE.
-	 *
 	 */
-	public function wafs_match_condition_subtotal_ex_tax	( $match, $operator, $value ){
+	public function wafs_match_condition_subtotal_ex_tax( $match, $operator, $value ){
 		if (!isset( WC()->cart ) ) return $match;
 
 		if ( '==' == $operator ) {
@@ -126,7 +121,7 @@ class WAFS_Match_Conditions {
 	}
 
 
-	/*
+	/**
 	 *  Taxes.
 	 *
 	 *  Match the condition value against the cart taxes.
@@ -138,8 +133,7 @@ class WAFS_Match_Conditions {
 	 *  @param 	mixed 	$value		Value given by the user in the condition row.
 	 *  @return 	BOOL 				Matching result, TRUE if results match, otherwise FALSE.
 	 */
-
-	public function wafs_match_condition_tax  ( $match, $operator, $value )
+	public function wafs_match_condition_tax( $match, $operator, $value )
 	{
 
 
@@ -256,17 +250,17 @@ class WAFS_Match_Conditions {
 
 
 	/**
-	* Weight.
-	*
-	* Match the condition value against the cart weight.
-	*
-	* @since 1.0.0
-	*
-	* @param 	bool 	$match		Current match value.
-	* @param 	string 	$operator	Operator selected by the user in the condition row.
-	* @param 	mixed 	$value		Value given by the user in the condition row.
-	* @return 	BOOL 				Matching result, TRUE if results match, otherwise FALSE.
-	*/
+	 * Weight.
+	 *
+	 * Match the condition value against the cart weight.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param 	bool 	$match		Current match value.
+	 * @param 	string 	$operator	Operator selected by the user in the condition row.
+	 * @param 	mixed 	$value		Value given by the user in the condition row.
+	 * @return 	BOOL 				Matching result, TRUE if results match, otherwise FALSE.
+	 */
 	public function wafs_match_condition_weight( $match, $operator, $value ) {
 
 		if ( ! isset( WC()->cart ) ) return $match;
@@ -749,8 +743,4 @@ class WAFS_Match_Conditions {
 
 	}
 
-}   
-   
-?>
-
-   
+}
